@@ -40,18 +40,12 @@ const Form = () => {
     const passwordIsValid = userData.password === str;
 
     if (!passwordIsValid || userData.password.length < 5) {
-     
       setError(true);
       setErrorMessage(
         "la contraseña no debe tener espacios en blanco y debe tener como minimo 5 caracteres"
       );
       return;
     }
-
-    // INSTRUCCION
-    console.log(userData);
-    // axios.post("elendpoint", userData)
-    // axios.patch("elendpoint", { email: userData.email })
   };
 
   return (
@@ -84,12 +78,3 @@ const Form = () => {
 };
 
 export default Form;
-
-//   let persona = {
-//     edad: 22,
-//     estado: "casado"
-//   }
-
-//   console.log( persona.edad )
-
-//   console.log( persona["edad"] )

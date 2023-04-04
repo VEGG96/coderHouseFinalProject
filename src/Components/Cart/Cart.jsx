@@ -10,7 +10,7 @@ const Cart = () => {
     useContext(CartContext);
 
   const [showForm, setShowForm] = useState(false);
-  const [orderId, setOrderId] = useState(null)
+  const [orderId, setOrderId] = useState(null);
 
   const clear = () => {
     Swal.fire({
@@ -29,14 +29,14 @@ const Cart = () => {
     });
   };
 
-  if(orderId){
+  if (orderId) {
     return (
       <div>
         <h2>Gracias por su compra</h2>
         <h4>el comprobante es : {orderId}</h4>
         <Link to="/">Seguir comprando</Link>
       </div>
-    )
+    );
   }
 
   return (
@@ -66,12 +66,12 @@ const Cart = () => {
           </div>
           <div className="cart-info">
             <h3>Precio total: {getTotalPrice()}</h3>
-            <h3>Descuento: - </h3>
-            <h3>Precio final: -</h3>
 
             {cart.length > 0 && (
               <div className="btn-cart">
-                <Button variant="contained" onClick={()=>setShowForm(true)}>Terminar la compra</Button>
+                <Button variant="contained" onClick={() => setShowForm(true)}>
+                  Terminar la compra
+                </Button>
                 <Button onClick={clear} variant="contained">
                   Vaciar carrito
                 </Button>
@@ -82,7 +82,12 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <FormCheckout cart={cart} getTotalPrice={getTotalPrice} setOrderId={setOrderId} clearCart={clearCart} />
+        <FormCheckout
+          cart={cart}
+          getTotalPrice={getTotalPrice}
+          setOrderId={setOrderId}
+          clearCart={clearCart}
+        />
       )}
     </div>
   );

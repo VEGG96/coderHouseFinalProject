@@ -28,7 +28,7 @@ const Navbar = ({ children }) => {
     <div>
       <div className={styles.containerNavbar}>
         <Link to="/" style={{ color: "#e1d4c7", textDecoration: "none" }}>
-          Tienda Zapas
+          Softwreen
         </Link>
 
         <ul className={styles.containerList}>
